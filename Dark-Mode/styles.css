@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  #theme-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+  }
+  
+  #toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  #theme-toggle:checked + #toggle-label {
+    background-color: #000000;
+  }
+  
+  #theme-toggle:checked + #toggle-label:before {
+    transform: translateX(26px);
+  }
+  
+  #toggle-label .fas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* color: white; */
+    transition: opacity 0.3s;
+  }
+  
+  #toggle-label .fa-sun {
+    left: 8px;
+  }
+  
+  #toggle-label .fa-moon {
+    right: 8px;
+    opacity: 0;
+  }
+  
+  #theme-toggle:checked + #toggle-label .fa-sun {
+    opacity: 0;
+  }
+  
+  #theme-toggle:checked + #toggle-label .fa-moon {
+    opacity: 1;
+  }
+  
+  /* Light Theme */
+  .light {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .light .container {
+    background-color: #f0f0f0;
+  }
+  
+  /* Dark Theme */
+  .dark {
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  .dark .container {
+    background-color: #444;
+  }
+  
