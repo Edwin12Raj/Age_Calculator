@@ -1,55 +1,73 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  .container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  label {
-    font-size: 18px;
-    color: #555;
-  }
-  
-  input {
-    padding: 10px;
-    font-size: 16px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: calc(100% - 24px);
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  #result {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #333;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #4316f7;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  color: aliceblue;
+}
+
+.container {
+  background-color: rgb(8, 0, 0);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 18px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: calc(100% - 24px);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.result-box {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 10px;
+  width: 20%;
+  transition: transform 0.3s ease;
+}
+
+.result-box h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.result-box p {
+  font-size: 24px;
+  margin: 10px 0 0;
+}
+
+.result-box:hover {
+  transform: scale(1.1);
+}
