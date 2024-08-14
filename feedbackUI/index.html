@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="feedback-system">
+        <h2>Select your feedback:</h2>
+        <div id="feedback-options">
+            <button class="feedback">Great 👍</button>
+            <button class="feedback">Good 😊</button>
+            <button class="feedback">Okay 😐</button>
+            <button class="feedback">Bad 😞</button>
+            <button class="feedback">Terrible 👎</button>
+        </div>
+        <button id="send-feedback">Send Feedback</button>
+    </div>
+    <div id="feedback-confirmation" class="hidden">
+        <h2>Thank You!</h2>
+        <p>Your feedback: <span id="selected-feedback"></span></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

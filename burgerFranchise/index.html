@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King Ordering System</title>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            background-color: #ffe6e6;
+            color: #3e2723;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .restaurant {
+            text-align: center;
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu label {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .menu input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #orderButton {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #orderButton:hover {
+            background-color: #b71c1c;
+        }
+
+        .order-display {
+            margin-top: 30px;
+            position: relative;
+            text-align: center;
+        }
+
+        #loadingMessage {
+            font-size: 1.5em;
+            color: #d32f2f;
+            animation: fadeIn 1s infinite alternate;
+        }
+
+        #foodImage {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        #orderId {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #4e342e;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="restaurant">
+        <h1>Welcome to Burger King</h1>
+        <div class="menu">
+            <h2>Select Your Food</h2>
+            <label><input type="checkbox" name="food" value="burger"> Burger</label>
+            <label><input type="checkbox" name="food" value="fries"> Fries</label>
+            <label><input type="checkbox" name="food" value="drink"> Drink</label>
+        </div>
+        <button id="orderButton">Order Food</button>
+    </div>
+
+    <div class="order-display">
+        <div id="loadingMessage" style="display:none;">Preparing your order...</div>
+        <img id="foodImage" src="" alt="" style="display:none;">
+        <div id="orderId" style="position:absolute; top:10px; right:10px;"></div>
+    </div>
+
+    <script>
+        document.getElementById('orderButton').addEventListener('click', function() {
+            const loadingMessage = document.getElementById('loadingMessage');
+            const foodImage = document.getElementById('foodImage');
+            const orderId = document.getElementById('orderId');
+
+            loadingMessage.style.display = 'block';
+            orderId.textContent = '';
+
+            new Promise((resolve) => {
+                setTimeout(resolve, Math.random() * 3000 + 2000); // Random delay between 2-5 seconds
+            }).then(() => {
+                loadingMessage.style.display = 'none';
+                foodImage.src = 'path/to/food/image.jpg'; // Set the appropriate image path
+                foodImage.style.display = 'block';
+                orderId.textContent = 'Order ID: ' + generateOrderId(); // Generate a unique order ID
+            });
+        });
+
+        function generateOrderId() {
+            return 'BK' + Math.floor(Math.random() * 10000); // Example order ID generation
+        }
+    </script>
+</body>
+</html>
