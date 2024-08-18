@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Auto Save Text area</h1>
+    <div class="theme-selector">
+        <button id="light-mode">Light Mode</button>
+        <button id="dark-mode">Dark Mode</button>
+    </div>
+
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="village" placeholder="Village" required>
+        <input type="text" id="city" placeholder="City" required>
+        <button type="submit">Add User</button>
+    </form>
+
+    <div id="userCards" class="card-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
