@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Shopping Website</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">PhoneMart</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Sign Up</a></li>
+
+      </ul>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for a phone..."
+        />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div class="phone-container" id="phone-container">
+        <!-- Phone cards will be displayed here -->
+      </div>
+
+      <button class="show-all-btn" id="show-all-btn">Show All</button>
+
+      <div class="overlay" id="overlay"></div>
+      <div class="modal" id="phone-details-modal">
+        <button class="close-btn" id="close-btn">Close</button>
+        <div id="phone-details" class="modal-content">
+          <!-- Phone details will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <p>&copy; 2024 PhoneMart. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
