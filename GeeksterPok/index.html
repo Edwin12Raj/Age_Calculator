@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksterPok</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>GeeksterPok</h1>
+        <div class="controls">
+            <select id="type-filter">
+                <option value="all">All Types</option>
+                <!-- More options will be dynamically added here -->
+            </select>
+            <button id="filter-btn">Filter by Type</button>
+            <input type="text" id="search-bar" placeholder="Search Pokémon">
+            <button id="reset-btn">Reset</button>
+        </div>
+    </header>
+    <div class="pokemon-container"></div>
+    <div class="loading-spinner" id="loading-spinner"></div>
+    <script src="script.js"></script>
+</body>
+</html>
