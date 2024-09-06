@@ -1,3 +1,4 @@
+// note: this project will only work as chrome exension and not as normal web app on any broswer
 document.addEventListener('DOMContentLoaded', function () {
     const noteArea = document.getElementById('noteArea');
     const saveButton = document.getElementById('saveNote');
